@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Global Variables */
+:root {
+  --primary: #7d2ae8;
+  --secondary: #00c4cc;
+}
+
+/* 2. Reset & Full-Screen Fix (Center karne ke liye sabse zaroori) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #050505; /* Default background */
+}
+
+/* Vite/React ke default alignment ko override karein */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 3. Global Styles */
+body {
+  color: #e2e8f0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 4. Apple Style Elegant Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* 5. Smooth Scrolling for Navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 6. Text Selection Color */
+::selection {
+  background-color: var(--secondary);
+  color: #000;
+}
