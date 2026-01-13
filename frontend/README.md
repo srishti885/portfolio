@@ -1,16 +1,65 @@
-# React + Vite
+Portfolio Website
+This is a full-stack portfolio application built using the MERN stack (MongoDB, Express.js, React.js, and Node.js). It includes a dynamic project showcase and a functional contact form with email notifications.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Structure
+The repository is divided into two main directories:
 
-Currently, two official plugins are available:
+frontend/: Contains the React.js application and UI components.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+backend/: Contains the Node.js server, API routes, and database models.
 
-## React Compiler
+Features
+Dynamic Project Section: Fetches project data directly from MongoDB.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Contact Form: Allows visitors to send messages which are saved in the database and sent via email using Nodemailer.
 
-## Expanding the ESLint configuration
+Responsive Design: Optimized for various screen sizes using CSS/Tailwind.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+REST API: Structured backend with clear endpoints for projects and messages.
+
+Tech Stack
+Frontend: React.js, Axios, CSS/Tailwind
+
+Backend: Node.js, Express.js
+
+Database: MongoDB (Atlas)
+
+Email Service: Nodemailer
+
+Environment Variables: Managed using dotenv
+
+Installation and Setup
+1. Clone the repository
+Bash
+
+git clone https://github.com/srishti885/portfolio.git
+cd portfolio
+2. Backend Setup
+Navigate to the backend folder: cd backend
+
+Install dependencies: npm install
+
+Create a .env file and add the following:
+
+MONGO_URI: Your MongoDB connection string
+
+EMAIL_USER: Your Gmail address
+
+EMAIL_PASS: Your Gmail App Password
+
+PORT: 5000
+
+Start the server: node server.js
+
+3. Frontend Setup
+Navigate to the frontend folder: cd ../frontend
+
+Install dependencies: npm install
+
+Start the React app: npm start
+
+API Endpoints
+GET /api/projects: Fetches all projects from the database.
+
+POST /api/contact/send: Sends a message and saves it to the database.
+
