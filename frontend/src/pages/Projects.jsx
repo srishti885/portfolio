@@ -45,6 +45,8 @@ const Projects = () => {
       desc: "Neural asset management jisme 40% storage overhead kam kiya gaya hai.",
       component: <NeuroVisionStudy />
     }
+     
+  
   ];
 
   return (
